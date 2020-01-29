@@ -2,20 +2,16 @@ const server = require('./server')
 const fs = require('fs')
 const filePath = './imdb-movies.json'
 
-let moviesInfo = (path) => {
+let moviesInfo = (path = filePath) => {
     let JsonData = fs.readFileSync(path);
     let movies = JSON.parse(JsonData)
-    return movies[0];
+    return movies;
 }
 
 let movies = moviesInfo(filePath);
 
+//console.log(movies.Title);
 
-console.log(movies.Title);
+server.start()
 
-
-//server.start()
-
-module.exports = {
-    moviesInfo
-}
+exports.moviesInfo = moviesInfo;

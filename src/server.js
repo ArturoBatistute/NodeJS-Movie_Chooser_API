@@ -1,8 +1,11 @@
+const movies = require('./index')
 const express = require('express')
 const app = express()
 
+let data = () => movies.moviesInfo();
+
 app.get('/v1/movie', async (req, res, next) => {
-  res.status(501).send('Not Implemented')
+  res.send(data())
 })
 
 app.get('/v1/movie/:director', async (req, res, next) => {
