@@ -2,10 +2,11 @@ const movies = require('./index')
 const express = require('express')
 const app = express()
 
-let data = () => movies.moviesInfo();
+let allMovies = () => movies.moviesInfo();
+let randomMovies = () => movies.randomMovies();
 
 app.get('/v1/movie', async (req, res, next) => {
-  res.send(data())
+  res.send(randomMovies())
 })
 
 app.get('/v1/movie/:director', async (req, res, next) => {
