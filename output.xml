@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="2" failures="2" time="1.192">
+  <testsuite name="Random Movies API Endpoints..." errors="0" failures="2" skipped="0" timestamp="2020-02-02T18:56:31" time="0.708" tests="2">
+    <testcase classname="Random Movies API Endpoints... /v1/movie" name="Random Movies API Endpoints... /v1/movie" time="0.02">
+      <failure>Error: expect(received).toHaveProperty(path)
+
+Expected path: &quot;director&quot;
+Received path: []
+
+Received value: {&quot;Actors&quot;: &quot;Evan Rachel Wood, Jim Sturgess, Joe Anderson, Dana Fuchs&quot;, &quot;Description&quot;: &quot;The music of the Beatles and the Vietnam War form the backdrop for the romance between an upper-class American girl and a poor Liverpudlian artist.&quot;, &quot;Director&quot;: &quot;Julie Taymor&quot;, &quot;Genre&quot;: &quot;Drama,Fantasy,Musical&quot;, &quot;Metascore&quot;: 56, &quot;Rank&quot;: 983, &quot;Rating&quot;: 7.4, &quot;Revenue (Millions)&quot;: 24.34, &quot;Runtime (Minutes)&quot;: 133, &quot;Title&quot;: &quot;Across the Universe&quot;, &quot;Votes&quot;: 95172, &quot;Year&quot;: 2007}
+    at Object.&lt;anonymous&gt; (/home/roots/codenation/nodejs-5/test/submit.test.js:12:22)
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)</failure>
+    </testcase>
+    <testcase classname="Random Movies API Endpoints... /v1/movie/:director" name="Random Movies API Endpoints... /v1/movie/:director" time="0.004">
+      <failure>Error: expect(received).toHaveProperty(path)
+
+Expected path: &quot;director&quot;
+Received path: []
+
+Received value: {&quot;Actors&quot;: &quot;Samuel L. Jackson, Kurt Russell, Jennifer Jason Leigh, Walton Goggins&quot;, &quot;Description&quot;: &quot;In the dead of a Wyoming winter, a bounty hunter and his prisoner find shelter in a cabin currently inhabited by a collection of nefarious characters.&quot;, &quot;Director&quot;: &quot;Quentin Tarantino&quot;, &quot;Genre&quot;: &quot;Crime,Drama,Mystery&quot;, &quot;Metascore&quot;: 68, &quot;Rank&quot;: 89, &quot;Rating&quot;: 7.8, &quot;Revenue (Millions)&quot;: 54.12, &quot;Runtime (Minutes)&quot;: 187, &quot;Title&quot;: &quot;The Hateful Eight&quot;, &quot;Votes&quot;: 341170, &quot;Year&quot;: 2015}
+    at Object.&lt;anonymous&gt; (/home/roots/codenation/nodejs-5/test/submit.test.js:24:22)
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

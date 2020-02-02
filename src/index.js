@@ -23,11 +23,16 @@ let directorRandomMovie = (director) => {
         if(movies.hasOwnProperty(key) && movies[key].Director === director)
             
         results[key] = movies[key];
-      
+
+        let resultsToArray = Object.values(results);
+        let onlyOne = (array) => array[Math.floor(Math.random() * array.length)];
+
+        results = onlyOne(resultsToArray)
+        
     return results;
 }
 
-server.start()
+server.start;
 
 exports.randomMovie = randomMovie;
 exports.directorRandomMovie = directorRandomMovie;
