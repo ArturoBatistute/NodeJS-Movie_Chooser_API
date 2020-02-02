@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "jest-junit": "^10.0.0"
+    "jest-junit": "^10.0.0",
+    "nodemon": "^2.0.2"
   }
 }

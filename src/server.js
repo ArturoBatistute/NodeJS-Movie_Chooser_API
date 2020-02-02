@@ -2,11 +2,6 @@ const movies = require('./index')
 const express = require('express')
 const app = express()
 
-/* Cant resolve function parameters import
-let randomMovie = () => movies.randomMovie();
-let directorRandomMovie = () => movies.directorRandomMovie();
-*/
-
 app.get('/v1/movie', async (req, res, next) => {
 
   res.send(movies.randomMovie());
