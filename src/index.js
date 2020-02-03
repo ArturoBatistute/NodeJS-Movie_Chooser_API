@@ -13,26 +13,38 @@ let movies = allMovies();
 
 let randomMovie = () => {
 
-    return movies[Math.floor(Math.random() * movies.length)];
+    let data =  movies[Math.floor(Math.random() * movies.length)];
+
+    let results = {
+        "Director": data.Director,
+        "Title": data.Title
+    }
+
+    return results;
 }
 
 let directorRandomMovie = (director) => {
-    let results = {};
+    let data = {};
 
     for(let key in movies)
         if(movies.hasOwnProperty(key) && movies[key].Director === director)
             
-        results[key] = movies[key];
+        data[key] = movies[key];
 
-        let resultsToArray = Object.values(results);
-        let onlyOne = (array) => array[Math.floor(Math.random() * array.length)];
+        let resultsToArray = Object.values(data);
+        let onlyOneMovie = (array) => array[Math.floor(Math.random() * array.length)];
 
-        results = onlyOne(resultsToArray)
+        data = onlyOneMovie(resultsToArray)
+        
+        let results = {
+            "Director": data.Director,
+            "Title": data.Title
+        }
         
     return results;
 }
 
-server.start;
+server.start();
 
 exports.randomMovie = randomMovie;
 exports.directorRandomMovie = directorRandomMovie;
